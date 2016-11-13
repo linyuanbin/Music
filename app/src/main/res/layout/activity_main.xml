@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/blueback"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--自定义标签栏-->
+<include layout="@layout/item"/>
+
+<!--
+    <TextView
+        android:layout_gravity="center"
+        android:textColor="#ff55"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="音乐播放器" />-->
+
+    <!-- android:text="yiwannian.mp3"-->
+   <!-- <EditText
+        android:id="@+id/filename"
+        android:maxLines="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />-->
+
+    <AdapterViewFlipper
+        android:layout_gravity="center"
+        android:id="@+id/adapterviewflipper"
+        android:layout_marginTop="10dp"
+        android:layout_width="300dp"
+        android:flipInterval="5000"
+        android:layout_height="300dp">
+
+    </AdapterViewFlipper>
+
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:textSize="15dp"
+        android:layout_marginTop="20dp"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.AppCompatSeekBar
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:id="@+id/seekbar"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/starTime"
+            android:paddingLeft="20dp"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/stopTime"
+            android:paddingLeft="260dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+      <!--  <Button
+            android:text="上一首"
+            android:onClick="up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />-->
+
+        <ImageButton
+            android:src="@drawable/up"
+            android:onClick="up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <!--  <Button
+            android:id="@+id/pausebutton"
+            android:text="暂停"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="mediaplay"/>-->
+
+        <ImageButton
+            android:src="@drawable/stop"
+            android:layout_marginLeft="50dp"
+            android:id="@+id/pause_button"
+            android:onClick="mediaplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+    <!--<Button
+        android:text="下一首"
+        android:onClick="next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />-->
+        <ImageButton
+            android:src="@drawable/next"
+            android:layout_marginLeft="50dp"
+            android:onClick="next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/playbutton"
+            android:text="播放"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="mediaplay"/>
+
+
+
+        <Button
+            android:id="@+id/resetbutton"
+            android:text="重播"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="mediaplay"/>
+
+        <Button
+            android:id="@+id/stopbutton"
+            android:text="停止"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="mediaplay"/>
+
+        <Spinner
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/spinner"
+            android:layout_centerHorizontal="true" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
