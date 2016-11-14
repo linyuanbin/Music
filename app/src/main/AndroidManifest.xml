@@ -8,6 +8,7 @@
     <!-- SD卡读写权限 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <!-- android:theme="@style/AppTheme" -->
     <application
         android:allowBackup="true"
@@ -19,17 +20,22 @@
         <!-- android:theme="@style/AppTheme" -->
         <activity android:name=".MainActivity">
             android:configChanges="orientation|screenSize"
+        </activity>
+        <!-- android:configChanges="orientation|screenSize"作用时在Activity从后台回到前台时不从新创建Activity -->
+        <activity android:name=".List_main" />
+
+        <service android:name=".MyService" />
+
+        <activity android:name=".FirstActivity"></activity>
+        <activity android:name=".StartActivity_animation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <!-- android:theme="@android:style/Theme.Light.NoTitleBar" -->
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--android:configChanges="orientation|screenSize"作用时在Activity从后台回到前台时不从新创建Activity-->
-        <activity android:name=".List_main">
-
+        <activity android:name=".Animation_img">
         </activity>
-        <service android:name=".MyService"/>
     </application>
 
 </manifest>
